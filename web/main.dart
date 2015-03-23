@@ -4,12 +4,11 @@
 
 import 'package:polymer/polymer.dart';
 
-void main() {
-	initPolymer().run(() {
-		// Code here is in the polymer Zone, which ensures that
-		// @observable properties work correctly.
-		Polymer.onReady.then((_) {
-			// Elements have been upgraded.
-		});
-	});
+main() => initPolymer();
+
+@initMethod
+void realMain() {
+  Polymer.onReady.then((_) {
+    // Elements have been upgraded.
+  });
 }
