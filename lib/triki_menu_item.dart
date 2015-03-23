@@ -2,7 +2,7 @@
 // code is governed by AGPLv3 license that can be found in the LICENSE file.
 // If you want to contribute read the rules in the CONTRIBUTING file.
 
-@HtmlImport('triki_menu_item.html')
+//@HtmlImport('triki_menu_item.html')
 library triki_menu_item;
 
 import 'package:polymer/polymer.dart';

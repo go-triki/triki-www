@@ -2,7 +2,7 @@
 // code is governed by AGPLv3 license that can be found in the LICENSE file.
 // If you want to contribute read the rules in the CONTRIBUTING file.
 
-@HtmlImport('search_box.html')
+//@HtmlImport('search_box.html')
 library search_box;
 
 import 'dart:html';

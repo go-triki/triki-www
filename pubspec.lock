@@ -110,9 +110,11 @@ packages:
     source: hosted
     version: "1.0.3"
   spa_router:
-    description: spa_router
-    source: hosted
-    version: "0.0.1+2"
+    description:
+      path: "/home/kornel/Documents/programowanie/triki/spa-router"
+      relative: false
+    source: path
+    version: "0.0.1+3"
   stack_trace:
     description: stack_trace
     source: hosted

@@ -9,7 +9,8 @@ dependencies:
   core_elements: '^0.6.1+2'
   paper_elements: '^0.6.2+2'
   polymer: '^0.16.0+6'
-  spa_router: '^0.0.1+2'
+  spa_router:
+    path: '/home/kornel/Documents/programowanie/triki/spa-router'
 transformers:
 - polymer:
     entry_points: web/index.html

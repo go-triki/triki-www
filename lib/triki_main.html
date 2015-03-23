@@ -70,7 +70,7 @@
 					<main>
 						<spa-router>
 							<spa-route path="/" elem="dummy-elem"></spa-route>
-							<spa-route path="**" elem="dummy-elem">
+							<spa-route path="**" on-route-activate="{{togglePanel}}">
 								<template><p>Unrecognized route!</p></template>
 							</spa-route>
 						</spa-router>
