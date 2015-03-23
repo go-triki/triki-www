@@ -13,7 +13,7 @@
    height="106.29921"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="ico.svg"
    inkscape:export-filename="/home/kornel/Documents/programowanie/triki/triki/www/static/img/ico.png"
    inkscape:export-xdpi="101.25"
@@ -124,7 +124,7 @@
          id="tspan3830"
          x="29.749693"
          y="1019.092"
-         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display;-inkscape-font-specification:Linux Libertine Display">T</tspan></text>
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display O;-inkscape-font-specification:Linux Libertine Display O">T</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -137,7 +137,7 @@
          id="tspan3834"
          x="19.697975"
          y="1008.9446"
-         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display;-inkscape-font-specification:Linux Libertine Display">α</tspan></text>
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display O;-inkscape-font-specification:Linux Libertine Display O">α</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -150,6 +150,6 @@
          id="tspan3838"
          x="69.993675"
          y="1014.2479"
-         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display;-inkscape-font-specification:Linux Libertine Display">∑</tspan></text>
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display O;-inkscape-font-specification:Linux Libertine Display O">∑</tspan></text>
   </g>
 </svg>

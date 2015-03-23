@@ -70,39 +70,33 @@
      transform="translate(0,-946.06166)"
      id="layer1">
     <path
-       d="m 99.500027,51.498432 a 46.719555,46.719555 0 1 1 -93.4391101,0 46.719555,46.719555 0 1 1 93.4391101,0 z"
+       d="m 99.500027,51.498432 c 0,25.802498 -20.917058,46.719555 -46.719555,46.719555 -25.802498,0 -46.7195551,-20.917057 -46.7195551,-46.719555 0,-25.802498 20.9170571,-46.7195547 46.7195551,-46.7195547 25.802497,0 46.719555,20.9170567 46.719555,46.7195547 z"
        transform="translate(-1.0382265,946.32019)"
        id="path2985"
-       style="fill:#e4e4e4;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.39999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3781)" />
-    <text
-       x="29.749693"
-       y="1019.092"
+       style="fill:#e4e4e4;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.39999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;filter:url(#filter3781)" />
+    <g
        id="text3828"
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
-         x="29.749693"
-         y="1019.092"
-         id="tspan3830"
-         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display;-inkscape-font-specification:Linux Libertine Display">T</tspan></text>
-    <text
-       x="19.697975"
-       y="1008.9446"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans">
+      <path
+         d="m 48.901693,980.49998 c 0.144,5.97599 0.144,9.50401 0.144,15.48 0,5.97602 0,9.28802 -0.144,15.26402 -0.144,5.976 -2.016005,6.336 -7.056,6.552 -0.432,0.432 -0.432,1.224 0,1.656 3.527996,-0.072 6.120004,-0.36 10.08,-0.36 3.887996,0 6.408004,0.288 10.008,0.36 0.431999,-0.432 0.431999,-1.224 0,-1.656 -5.039995,-0.216 -6.912,-0.576 -7.056,-6.552 -0.144,-5.904 -0.144,-9.216 -0.144,-15.19202 0,-5.97599 -0.072,-9.43201 0.144,-15.552 0.144,-4.608 0.792003,-5.76 3.384,-5.76 l 2.304,0 c 5.399995,0 8.784001,2.59201 10.008,8.136 0.791999,0 1.080001,-0.072 1.728,-0.36 -0.504,-3.312 -0.864,-7.2 -0.936,-10.44 0,-0.072 -0.144,-0.216 -0.216,-0.216 -2.447998,0.216 -10.440006,0.792 -16.128,0.792 l -6.192,0 c -5.543995,0 -14.040003,-0.576 -16.776,-0.792 -0.144,0 -0.288,0.144 -0.288,0.216 -0.288,3.24 -1.008001,7.2 -1.8,10.656 0.719999,0.288 0.864001,0.36 1.728,0.36 1.439998,-5.75999 4.752005,-8.352 9.504,-8.352 l 4.248,0 c 2.663997,0 3.312,1.368 3.456,5.76"
+         id="path3017"
+         style="font-size:72px;font-variant:normal;font-stretch:normal;font-family:Linux Libertine Display O;-inkscape-font-specification:Linux Libertine Display O" />
+    </g>
+    <g
        id="text3832"
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
-         x="19.697975"
-         y="1008.9446"
-         id="tspan3834"
-         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display;-inkscape-font-specification:Linux Libertine Display">α</tspan></text>
-    <text
-       x="69.993675"
-       y="1014.2479"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans">
+      <path
+         d="m 29.057975,1004.5766 2.88,-5.56802 c -0.288,0 -0.792,0.12 -1.128,0.12 -0.336,0 -0.768,-0.12 -1.104,-0.12 l -1.08,2.92802 c -0.072,0.168 -0.12,0.288 -0.168,0.048 -0.455999,-1.99202 -1.344002,-3.09602 -3.024,-3.09602 -2.087998,0 -4.968,1.34402 -4.968,5.56802 0,2.832 1.248003,4.728 4.176,4.728 1.559999,0 2.616001,-0.96 3.768,-3.216 l 0.192,0.888 c 0.36,1.56 0.984001,2.328 1.824,2.328 1.007999,0 1.584001,-0.552 2.088,-1.992 -0.144,-0.168 -0.312,-0.264 -0.576,-0.264 -0.383999,0.696 -0.696,0.84 -1.272,0.84 -0.527999,0 -0.984,-0.648 -1.272,-1.872 l -0.336,-1.32 m -1.128,-0.72 -0.384,0.936 c -0.767999,2.184 -1.728001,3.6 -2.784,3.6 -1.703998,0 -2.352,-1.992 -2.352,-4.464 0,-2.64 1.368002,-4.27202 2.904,-4.27202 1.367999,0 1.968001,1.51202 2.496,3.72002 l 0.12,0.48"
+         id="path3023"
+         style="font-size:24px;font-variant:normal;font-stretch:normal;font-family:Linux Libertine Display O;-inkscape-font-specification:Linux Libertine Display O" />
+    </g>
+    <g
        id="text3836"
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
-         x="69.993675"
-         y="1014.2479"
-         id="tspan3838"
-         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display;-inkscape-font-specification:Linux Libertine Display">∑</tspan></text>
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans">
+      <path
+         d="m 83.741675,997.92392 -13.048,0 0,0.644 c 0.42,0 1.148001,0.28001 1.904,1.288 l 4.732,7.44798 -5.656,7.532 c -0.391999,0.476 -0.672,0.532 -1.008,0.532 l 0,0.616 13.468,0 0.784,-4.9 -0.616,-0.056 c -0.028,0.14 -0.896002,3.332 -2.856,3.332 l -7.84,0 5.712,-7.616 0.028,-0.028 -4.816,-7.61598 6.384,0 c 1.595999,0 2.464,2.26798 2.604,2.79998 l 0.616,-0.084 -0.392,-3.89198"
+         id="path3020"
+         style="font-size:28px;font-variant:normal;font-stretch:normal;font-family:Linux Libertine Display O;-inkscape-font-specification:Linux Libertine Display O" />
+    </g>
   </g>
 </svg>
