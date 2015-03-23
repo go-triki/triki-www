@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!--
+	Copyright (c) 2014, Kornel Maczyński. All rights reserved. Use of this source
+	code is governed by AGPLv3 license that can be found in the license file.
+	If you want to contribute read the rules in the contributing file.
+-->
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trikipedia</title>
+	<link rel="icon" href="images/icons/ico-clean.svg">
+
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" sizes="192x192" href="images/icons/ico-192.png">
+
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+	<meta name="apple-mobile-web-app-title" content="Trikipedia">
+	<link rel="apple-touch-icon-precomposed" href="images/icons/ico-152.png">
+
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage" content="images/icons/ico-144.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+
+	<!-- example of using a paper element -->
+	<!--<link rel="import" href="packages/paper_elements/roboto.html">-->
+
+	<link rel="import" href="packages/triki/triki_main.html">
+	
+	<link rel="import" href="packages/triki/triki_router.html">
+	<link rel="import" href="packages/triki/triki_route.html">
+
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body fullbleed layout vertical unresolved>
+	<triki-router>
+		<triki-route name="main" path="/" defaultRoute></triki-route>
+		<triki-route name="test" path="/test"></triki-route>
+	</triki-router>
+	<triki-main></triki-main>
+	<!--<script type="application/dart">
+		import 'main.dart';
+		export 'package:polymer/init.dart';
+	</script>-->
+	<script type="application/dart" src="main.dart"></script>
+</body>
+</html>

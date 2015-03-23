@@ -1,0 +1,47 @@
+<!--
+	Copyright (c) 2014, Kornel Maczyński. All rights reserved. Use of this source
+	code is governed by AGPLv3 license that can be found in the license file.
+	If you want to contribute read the rules in the contributing file.
+-->
+
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<link rel="import" href="../../packages/paper_elements/paper_input_decorator.html">
+<link rel="import" href="../../packages/paper_elements/paper_icon_button.html">
+
+<polymer-element name="search-box">
+	<template>
+		<style>
+			/*:host {
+				display: block;
+			}*/
+			.heightLimit {
+				height: 1.5em;
+				/*vertical-align: center;*/
+				position: relative;
+				bottom: 1.1em;
+			}
+			paper-input-decorator {
+				font-size: 70%;
+			}
+		</style>
+		<form layout horizontal on-submit="{{search}}" id="searchForm">
+			
+			<paper-icon-button icon="search" title="Search" on-tap="{{search}}">
+			</paper-icon-button>
+			<div class="heightLimit">
+				<paper-input-decorator floatingLabel
+					label="Search for..."
+					isInvalid="{{!valid}}"
+					error="{{errorMsg}}">
+					<input is="core-input" id="searchInput"
+						value="{{searchTerm}}"
+						required autofocus>
+				</paper-input-decorator>
+			</div>
+			<paper-icon-button icon="clear" title="Clear search query" on-tap="{{clear}}">
+			</paper-icon-button>
+		</form>
+	</template>
+	<script type="application/dart" src="search_box.dart"></script>
+</polymer-element>

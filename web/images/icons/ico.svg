@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="106.29921"
+   height="106.29921"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="ico.svg"
+   inkscape:export-filename="/home/kornel/Documents/programowanie/triki/triki/www/static/img/ico.png"
+   inkscape:export-xdpi="101.25"
+   inkscape:export-ydpi="101.25">
+  <defs
+     id="defs4">
+    <filter
+       inkscape:collect="always"
+       id="filter3781"
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.801121"
+         id="feGaussianBlur3783"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix3816" />
+      <feFlood
+         id="feFlood3818"
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         id="feComposite3820"
+         in2="fbSourceGraphic"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur3822"
+         in="composite"
+         stdDeviation="2"
+         result="blur" />
+      <feOffset
+         id="feOffset3824"
+         dx="4"
+         dy="4"
+         result="offset" />
+      <feComposite
+         id="feComposite3826"
+         in2="offset"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="23.430291"
+     inkscape:cy="62.857143"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="cm"
+     inkscape:window-width="1830"
+     inkscape:window-height="1060"
+     inkscape:window-x="86"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-946.06166)">
+    <path
+       sodipodi:type="arc"
+       style="fill:#e4e4e4;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.39999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3781)"
+       id="path2985"
+       sodipodi:cx="52.780472"
+       sodipodi:cy="51.498432"
+       sodipodi:rx="46.719555"
+       sodipodi:ry="46.719555"
+       d="m 99.500027,51.498432 c 0,25.802498 -20.917058,46.719555 -46.719555,46.719555 -25.802498,0 -46.7195551,-20.917057 -46.7195551,-46.719555 0,-25.802498 20.9170571,-46.7195547 46.7195551,-46.7195547 25.802497,0 46.719555,20.9170567 46.719555,46.7195547 z"
+       transform="translate(-1.0382265,946.32019)"
+       inkscape:label="Globe" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="29.749693"
+       y="1019.092"
+       id="text3828"
+       sodipodi:linespacing="125%"
+       inkscape:label="Triki T"><tspan
+         sodipodi:role="line"
+         id="tspan3830"
+         x="29.749693"
+         y="1019.092"
+         style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display;-inkscape-font-specification:Linux Libertine Display">T</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="19.697975"
+       y="1008.9446"
+       id="text3832"
+       sodipodi:linespacing="125%"
+       inkscape:label="alpha"><tspan
+         sodipodi:role="line"
+         id="tspan3834"
+         x="19.697975"
+         y="1008.9446"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display;-inkscape-font-specification:Linux Libertine Display">α</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="69.993675"
+       y="1014.2479"
+       id="text3836"
+       sodipodi:linespacing="125%"
+       inkscape:label="sum"><tspan
+         sodipodi:role="line"
+         id="tspan3838"
+         x="69.993675"
+         y="1014.2479"
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Linux Libertine Display;-inkscape-font-specification:Linux Libertine Display">∑</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<!--
+	Copyright (c) 2014, Kornel Maczyński. All rights reserved. Use of this source
+	code is governed by AGPLv3 license that can be found in the license file.
+	If you want to contribute read the rules in the contributing file.
+-->
+
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<link rel="import" href="../../packages/paper_elements/paper_icon_button.html">
+
+<link rel="import" href="../../packages/core_elements/core_toolbar.html">
+<link rel="import" href="../../packages/core_elements/core_menu.html">
+<link rel="import" href="../../packages/core_elements/core_header_panel.html">
+<link rel="import" href="../../packages/core_elements/core_drawer_panel.html">
+
+<link rel="import" href="search_box.html">
+<link rel="import" href="login_widget.html">
+<link rel="import" href="triki_menu_item.html">
+
+<link rel="import" href="dummy_elem.html">
+
+<polymer-element name="triki-main">
+	<template>
+		<link rel="stylesheet" href="triki_main.css">
+		
+		<core-drawer-panel id="drawerPanel" forceNarrow>
+			<!-- MENU -->
+			<core-header-panel fit mode="waterfall" drawer>
+				<core-toolbar on-tap="{{closePanel}}">
+					<span>Menu</span>
+				</core-toolbar>
+				<div fit class="white" layout vertical>
+					<core-menu>
+						<triki-menu-item route="home">
+							<core-icon icon="home"></core-icon> Home
+						</triki-menu-item>
+						<triki-menu-item route="help">
+							<core-icon icon="help"></core-icon> Help
+						</triki-menu-item>
+					</core-menu>
+					<div flex></div>
+					<div>© 2014 Kornel Maczyński</div>
+				</div>
+			</core-header-panel>
+			<!-- MAIN -->
+			<core-header-panel fit mode="waterfall" main>
+				<core-toolbar>
+					<!-- menu btn -->
+					<paper-icon-button icon="menu" on-tap="{{togglePanel}}" title="Menu">
+					</paper-icon-button>
+					<!-- logo btn -->
+					<a href="#/"><paper-icon-button
+						src="images/icons/ico-clean.svg"
+						aria-label="home"
+						title="Go to home page"
+						id="logo-btn">
+					</paper-icon-button></a>
+					<!-- search box -->
+					<search-box></search-box>
+					<span flex></span>
+					<!-- login widget -->
+					<login-widget>
+					</login-widget>
+				</core-toolbar>
+				
+				<!-- MAIN ARTICLE -->
+				<div layout vertical>
+					<main>
+						<dummy-elem></dummy-elem>
+					</main>
+				</div>
+			</core-header-panel>
+		</core-drawer-panel>
+	</template>
+	<script type="application/dart" src="triki_main.dart"></script>
+</polymer-element>

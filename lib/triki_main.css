@@ -1,0 +1,16 @@
+:host {
+	display: block;
+}
+#logo-btn /deep/ core-icon[role=img] {/* big logo */
+	height: 2.8em;
+	width: 2.8em;
+	padding: 0px;
+	margin: 0px;
+}
+#logo-btn {
+	padding: 1px;
+	magrin: 1px;
+}
+.white {
+	background-color: white;
+}
