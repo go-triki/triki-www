@@ -17,6 +17,9 @@
 <link rel="import" href="login_widget.html">
 <link rel="import" href="triki_menu_item.html">
 
+<link rel="import" href="../../packages/spa_router/spa_router.html">
+<link rel="import" href="../../packages/spa_router/spa_route.html">
+
 <link rel="import" href="dummy_elem.html">
 
 <polymer-element name="triki-main">
@@ -46,27 +49,31 @@
 			<core-header-panel fit mode="waterfall" main>
 				<core-toolbar>
 					<!-- menu btn -->
-					<paper-icon-button icon="menu" on-tap="{{togglePanel}}" title="Menu">
+					<paper-icon-button icon="menu" on-tap="{{togglePanel}}" title="Menu" aria-label="Menu">
 					</paper-icon-button>
 					<!-- logo btn -->
 					<a href="#/"><paper-icon-button
 						src="images/icons/ico-clean.svg"
-						aria-label="home"
+						aria-label="Home"
 						title="Go to home page"
-						id="logo-btn">
-					</paper-icon-button></a>
+						id="logo-btn"></paper-icon-button>
+					</a>
 					<!-- search box -->
 					<search-box></search-box>
 					<span flex></span>
 					<!-- login widget -->
-					<login-widget>
-					</login-widget>
+					<login-widget></login-widget>
 				</core-toolbar>
 
 				<!-- MAIN ARTICLE -->
 				<div layout vertical>
 					<main>
-						<dummy-elem></dummy-elem>
+						<spa-router>
+							<spa-route path="/" elem="dummy-elem"></spa-route>
+							<spa-route path="**" elem="dummy-elem">
+								<template><p>Unrecognized route!</p></template>
+							</spa-route>
+						</spa-router>
 					</main>
 				</div>
 			</core-header-panel>
