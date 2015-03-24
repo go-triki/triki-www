@@ -30,10 +30,10 @@ class SearchBox extends PolymerElement {
     _input = $[r'searchInput'];
     _div = shadowRoot.querySelector('.heightLimit');
     _onFocusSub = _input.onFocus.listen((_) {
-      new Future(() => _div.style.maxWidth = "30em");
+      _div.style.maxWidth = "30em";
     });
     _onBlurSub = _input.onBlur.listen((_) {
-    	_div.style.maxWidth = "13em";
+      _div.style.maxWidth = "13em";
     });
   }
 
