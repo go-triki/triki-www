@@ -8,7 +8,7 @@ dependencies:
   browser: '^0.10.0+2'
   core_elements: '^0.6.1+2'
   paper_elements: '^0.6.2+2'
-  polymer: '^0.16.0+6'
+  polymer: '^0.16.0+7'
   spa_router:
     path: '/home/kornel/Documents/programowanie/triki/spa-router'
 transformers:

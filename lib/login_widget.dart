@@ -2,14 +2,11 @@
 // code is governed by AGPLv3 license that can be found in the LICENSE file.
 // If you want to contribute read the rules in the CONTRIBUTING file.
 
-//@HtmlImport('login_widget.html')
 library login_widget;
 
 import 'package:polymer/polymer.dart';
 
 @CustomTag('login-widget')
-class SearchBox extends PolymerElement {
-
-	SearchBox.created() : super.created();
-
+class LoginWidget extends PolymerElement {
+  LoginWidget.created() : super.created();
 }

@@ -2,7 +2,6 @@
 // code is governed by AGPLv3 license that can be found in the LICENSE file.
 // If you want to contribute read the rules in the CONTRIBUTING file.
 
-//@HtmlImport('triki_main.html')
 library triki_main;
 
 import 'package:polymer/polymer.dart';
@@ -11,11 +10,11 @@ import 'package:core_elements/core_drawer_panel.dart';
 
 /// Main triki app element.
 @CustomTag('triki-main')
-class MainApp extends PolymerElement {
+class TrikiMain extends PolymerElement {
   CoreDrawerPanel _drawerPanel;
 
   /// Constructor used to create instance of MainApp.
-  MainApp.created() : super.created() {
+  TrikiMain.created() : super.created() {
     //_drawerPanel = $[r'drawerPanel'] as CoreDrawerPanel;
   }
 
