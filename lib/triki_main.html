@@ -12,6 +12,7 @@
 <link rel="import" href="../../packages/core_elements/core_menu.html">
 <link rel="import" href="../../packages/core_elements/core_header_panel.html">
 <link rel="import" href="../../packages/core_elements/core_drawer_panel.html">
+<link rel="import" href="../../packages/core_elements/core_a11y_keys.html">
 
 <link rel="import" href="search_box.html">
 <link rel="import" href="login_widget.html">
@@ -25,6 +26,7 @@
 <polymer-element name="triki-main">
 	<template>
 		<link rel="stylesheet" href="triki_main.css">
+		<core-a11y-keys keys="esc" on-keys-pressed="{{closePanel}}"></core-a11y-keys>
 
 		<core-drawer-panel id="drawerPanel" forceNarrow>
 			<!-- Side MENU -->
@@ -46,17 +48,18 @@
 				<!-- Top MENU -->
 				<core-toolbar>
 					<!-- menu btn -->
-					<paper-icon-button icon="menu" on-tap="{{togglePanel}}" title="Menu" aria-label="Menu">
+					<paper-icon-button icon="menu" on-tap="{{togglePanel}}" title="Menu"
+						aria-label="Menu" id="menu-btn">
 					</paper-icon-button>
 					<!-- logo btn -->
-					<a href="#/"><paper-icon-button
+					<a href="#/" id="logo-link"><paper-icon-button
 						src="images/icons/ico-clean.svg"
 						aria-label="Home"
 						title="Go to home page"
 						id="logo-btn"></paper-icon-button>
 					</a>
 					<!-- search box -->
-					<search-box></search-box>
+					<search-box flex three></search-box>
 					<span flex></span>
 					<!-- login widget -->
 					<login-widget></login-widget>

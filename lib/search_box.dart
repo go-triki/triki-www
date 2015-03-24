@@ -11,36 +11,37 @@ import 'package:polymer/polymer.dart';
 
 @CustomTag('search-box')
 class SearchBox extends PolymerElement {
-  @observable String searchTerm;
+  @observable String searchTerm = "";
   @observable bool valid = true;
 
-  static const int MIN_LENGTH = 3;
+  static const int _MIN_LENGTH = 3;
 
   InputElement _input;
 
-  SearchBox.created() : super.created() {
-    //_input = $[r'searchInput'] as InputElement;
-  }
+  SearchBox.created() : super.created();
 
   @override
   void ready() {
     super.ready();
-    _input = $[r'searchInput'] as InputElement;
+    _input = $[r'searchInput'];
   }
 
   void search(Event e) {
     e.preventDefault();
-    if (searchTerm.length < MIN_LENGTH) {
+    if (searchTerm.length < _MIN_LENGTH) {
       valid = false;
+      _input.focus();
       return;
     }
     print(searchTerm);
   }
 
   void searchTermChanged(String oldValue, String newValue) {
-    if (newValue == null ||
-        newValue.length >= MIN_LENGTH ||
-        newValue.length == 0) {
+    if (newValue == null) {
+      newValue = "";
+      searchTerm = "";
+    }
+    if (newValue.length >= _MIN_LENGTH || newValue.length == 0) {
       valid = true;
     }
   }
@@ -52,6 +53,6 @@ class SearchBox extends PolymerElement {
   }
 
   String get errorMsg {
-    return "Type at least ${MIN_LENGTH} characters.";
+    return "Type at least ${_MIN_LENGTH} characters.";
   }
 }

@@ -8,6 +8,7 @@
 
 <link rel="import" href="../../packages/paper_elements/paper_input_decorator.html">
 <link rel="import" href="../../packages/paper_elements/paper_icon_button.html">
+<link rel="import" href="../../packages/core_elements/core_a11y_keys.html">
 
 <polymer-element name="search-box">
 	<template>
@@ -24,12 +25,17 @@
 			paper-input-decorator {
 				font-size: 70%;
 			}
+			div {
+			  min-width: 3em;
+			}
 		</style>
-		<form layout horizontal on-submit="{{search}}" id="searchForm">
+		<core-a11y-keys keys="esc" on-keys-pressed="{{clear}}"></core-a11y-keys>
 
+
+		<form layout horizontal on-submit="{{search}}" id="searchForm">
 			<paper-icon-button icon="search" title="Search" on-tap="{{search}}">
 			</paper-icon-button>
-			<div class="heightLimit">
+			<div class="heightLimit" flex>
 				<paper-input-decorator floatingLabel
 					label="Search for..."
 					isInvalid="{{!valid}}"

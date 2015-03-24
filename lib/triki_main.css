@@ -7,9 +7,20 @@
 	padding: 0px;
 	margin: 0px;
 }
+/* hide logo on narrow screens */
+@media screen and (max-width: 550px) {
+	#logo-link {
+		display: none;
+	}
+}
 #logo-btn {
 	padding: 1px;
 	magrin: 1px;
+}
+#menu-btn {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
 }
 .white {
 	background-color: white;
