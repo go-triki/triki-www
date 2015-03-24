@@ -27,26 +27,23 @@
 		<link rel="stylesheet" href="triki_main.css">
 
 		<core-drawer-panel id="drawerPanel" forceNarrow>
-			<!-- MENU -->
+			<!-- Side MENU -->
 			<core-header-panel fit mode="waterfall" drawer>
 				<core-toolbar on-tap="{{closePanel}}">
 					<span>Menu</span>
 				</core-toolbar>
 				<div fit class="white" layout vertical>
 					<core-menu>
-						<triki-menu-item route="home">
-							<core-icon icon="home"></core-icon> Home
-						</triki-menu-item>
-						<triki-menu-item route="help">
-							<core-icon icon="help"></core-icon> Help
-						</triki-menu-item>
+						<triki-menu-item icon="home" href="#/">Home</triki-menu-item>
+						<triki-menu-item icon="help" href="#/help">Help</triki-menu-item>
 					</core-menu>
 					<div flex></div>
 					<div>© 2014 Kornel Maczyński</div>
 				</div>
 			</core-header-panel>
-			<!-- MAIN -->
+			<!--  -->
 			<core-header-panel fit mode="waterfall" main>
+				<!-- Top MENU -->
 				<core-toolbar>
 					<!-- menu btn -->
 					<paper-icon-button icon="menu" on-tap="{{togglePanel}}" title="Menu" aria-label="Menu">
@@ -70,7 +67,7 @@
 					<main>
 						<spa-router>
 							<spa-route path="/" elem="dummy-elem"></spa-route>
-							<spa-route path="**" on-route-activate="{{togglePanel}}">
+							<spa-route path="**">
 								<template><p>Unrecognized route!</p></template>
 							</spa-route>
 						</spa-router>
