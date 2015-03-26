@@ -5,6 +5,7 @@
 library triki_menu_item;
 
 import 'dart:html';
+import 'dart:async';
 
 import 'package:polymer/polymer.dart';
 
@@ -20,13 +21,13 @@ class TrikiMenuItem extends PolymerElement {
     e.preventDefault();
     MouseEvent ev = new MouseEvent(e.type,
         button: e.button,
-        cancelable: e.cancelable,
+        canBubble: false, // don't get into an infinite loop
         ctrlKey: e.ctrlKey,
         altKey: e.altKey,
         shiftKey: e.shiftKey,
         metaKey: e.metaKey);
     if (isHref) {
-      ($['text'] as AnchorElement).dispatchEvent(ev);
+      new Future(() =>($['text'] as AnchorElement).dispatchEvent(ev));
     }
     return false;
   }
