@@ -6,12 +6,17 @@
 
 <link rel="import" href="../../packages/polymer/polymer.html">
 
-<link rel="import" href="../../packages/paper_elements/paper_icon_button.html">
+<link rel="import" href="logged_in.html">
 
 <polymer-element name="login-widget">
 	<template>
-		<paper-icon-button icon="menu">
-		</paper-icon-button>
+		<logged-in loggedIn="{{loggedIn}}"></logged-in>
+		<template if={{loggedIn}}>
+			Hi!
+		</template>
+		<template if={{!loggedIn}}>
+			<a href on-click="{{login}}">Log in</a> or <a href on-click="{{logout}}">sign up</a>!
+		</template>
 	</template>
 	<script type="application/dart" src="login_widget.dart"></script>
 </polymer-element>

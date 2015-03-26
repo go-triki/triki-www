@@ -7,9 +7,18 @@
 	padding: 0px;
 	margin: 0px;
 }
-/* hide logo on narrow screens */
+/* hide logo and separator (right to search box) on narrow screens */
 @media screen and (max-width: 550px) {
 	#logo-link {
+		display: none;
+	}
+	#top-separator {
+		display: none;
+	}
+}
+/* hide login widget on narrow screens */
+@media screen and (max-width: 640px) {
+	#top-login {
 		display: none;
 	}
 }

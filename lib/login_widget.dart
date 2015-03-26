@@ -8,5 +8,7 @@ import 'package:polymer/polymer.dart';
 
 @CustomTag('login-widget')
 class LoginWidget extends PolymerElement {
+	@observable bool loggedIn;
+
   LoginWidget.created() : super.created();
 }

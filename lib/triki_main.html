@@ -10,6 +10,7 @@
 
 <link rel="import" href="../../packages/core_elements/core_toolbar.html">
 <link rel="import" href="../../packages/core_elements/core_menu.html">
+<link rel="import" href="../../packages/paper_elements/paper_item.html">
 <link rel="import" href="../../packages/core_elements/core_header_panel.html">
 <link rel="import" href="../../packages/core_elements/core_drawer_panel.html">
 <link rel="import" href="../../packages/core_elements/core_a11y_keys.html">
@@ -36,6 +37,8 @@
 				</core-toolbar>
 				<div fit class="white" layout vertical>
 					<core-menu>
+						<!-- wrapped in div to prevent selecting it -->
+						<div><paper-item noink><login-widget></login-widget></paper-item></div>
 						<triki-menu-item icon="home" href="#/">Home</triki-menu-item>
 						<triki-menu-item icon="help" href="#/help">Help</triki-menu-item>
 					</core-menu>
@@ -60,9 +63,9 @@
 					</a>
 					<!-- search box -->
 					<search-box flex three></search-box>
-					<span flex></span>
+					<span flex id="top-separator"></span>
 					<!-- login widget -->
-					<login-widget></login-widget>
+					<login-widget id="top-login"></login-widget>
 				</core-toolbar>
 
 				<!-- MAIN ARTICLE -->

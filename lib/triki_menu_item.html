@@ -9,7 +9,7 @@
 <link rel="import" href="../../packages/core_elements/core_icon.html">
 <link rel="import" href="../../packages/paper_elements/paper_item.html">
 
-<polymer-element name="triki-menu-item" attributes="href icon" noscript>
+<polymer-element name="triki-menu-item" attributes="href icon">
 	<template>
 		<style>
 			a {
@@ -20,9 +20,17 @@
 			  margin-left: 15px;
 			}
 		</style>
-		<paper-item>
-			<a _href="{{href}}"><core-icon _icon="{{icon}}"></core-icon></a>
-			<a _href="{{href}}" id="text" flex twelve><content></content></a>
+		<paper-item on-click="{{go}}">
+			<template if="{{isIcon}}">
+				<a _href="{{href}}"><core-icon _icon="{{icon}}"></core-icon></a>
+			</template>
+			<template if={{isHref}}>
+				<a _href="{{href}}" id="text" flex twelve><content></content></a>
+			</template>
+			<template if="{{!isHref}}">
+				<content></content>
+			</template>
 		</paper-item>
 	</template>
+	<script type="application/dart" src="triki_menu_item.dart"></script>
 </polymer-element>
