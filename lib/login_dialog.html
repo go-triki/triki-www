@@ -1,0 +1,56 @@
+<!--
+	Copyright (c) 2014, Kornel Maczyński. All rights reserved. Use of this source
+	code is governed by AGPLv3 license that can be found in the LICENSE file.
+	If you want to contribute read the rules in the CONTRIBUTING file.
+-->
+
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<link rel="import" href="../../packages/core_elements/core_icon.html">
+
+<link rel="import" href="../../packages/paper_elements/paper_action_dialog.html">
+<link rel="import" href="../../packages/paper_elements/paper_button.html">
+
+
+<polymer-element name="login-dialog">
+	<template>
+		<paper-action-dialog layered backdrop opened="{{opened}}" closeSelector="[dismissive]"
+				heading="{{heading}}"
+				transition="core-transition-center">
+			<!-- LOGIN / SIGNUP -->
+			<template if="{{isLogin}}">
+				<p>Input your login credentials or <a href on-click="{{other}}">sign-up</a>.</p>
+			</template>
+			<template if="{{!isLogin}}">
+				<p>Choose your user ID (your valid email address) and password
+				(minimum {{minPassLength}} characters) or <a href on-click="{{other}}">log-in</a>.</p>
+			</template>
+				<form on-submit="{{submit}}" id="form">
+					<paper-input-decorator labelVisible floatinglabel
+						error="Email required"
+						label="Email address">
+	          <input is="core-input" value="{{Usr}}" type="email" id="usrId" required autofocus>
+	        </paper-input-decorator>
+	        <paper-input-decorator labelVisible floatinglabel
+						error="Password required (minimum length: {{minPassLength}})"
+						label="Password (minimum length: {{minPassLength}})">
+	          <input is="core-input" value="{{Pass}}"
+	          	pattern=".{[[minPassLength]],}" type="password" id="usrPass" required>
+	        </paper-input-decorator>
+	        <template if="{{!isLogin}}">
+	        	<paper-input-decorator labelVisible floatinglabel
+							error="Required (need to match the above exactly)"
+							label="Repeat your password">
+		          <input is="core-input"
+		          	pattern="{{Pass}}" type="password" required>
+		        </paper-input-decorator>
+	        </template>
+	        <input type="submit" hidden>
+				</form>
+			<!-- BUTTONS -->
+			<paper-button dismissive raised><core-icon icon="close"></core-icon>Cancel</paper-button>
+			<paper-button affirmative raised on-click="{{OkClick}}"><core-icon icon="check"></core-icon>OK</paper-button>
+		</paper-action-dialog>
+	</template>
+	<script type="application/dart" src="login_dialog.dart"></script>
+</polymer-element>

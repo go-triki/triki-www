@@ -108,7 +108,7 @@ packages:
   source_span:
     description: source_span
     source: hosted
-    version: "1.0.3"
+    version: "1.1.0"
   spa_router:
     description:
       path: "/home/kornel/Documents/programowanie/triki/spa-router"

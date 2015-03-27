@@ -6,16 +6,27 @@
 
 <link rel="import" href="../../packages/polymer/polymer.html">
 
+
+<link rel="import" href="login_dialog.html">
 <link rel="import" href="logged_in.html">
 
 <polymer-element name="login-widget">
 	<template>
+		<style>
+			a {
+				text-decoration: underline;
+			}
+			a:hover {
+				cursor:pointer;
+			}
+		</style>
+		<login-dialog></login-dialog>
 		<logged-in loggedIn="{{loggedIn}}"></logged-in>
 		<template if={{loggedIn}}>
 			Hi!
 		</template>
 		<template if={{!loggedIn}}>
-			<a href on-click="{{login}}">Log in</a> or <a href on-click="{{logout}}">sign up</a>!
+			<a active on-click="{{dialog.login}}">Log in</a> or <a on-click="{{dialog.signup}}">sign up</a>!
 		</template>
 	</template>
 	<script type="application/dart" src="login_widget.dart"></script>

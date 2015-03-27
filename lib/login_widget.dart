@@ -6,9 +6,13 @@ library login_widget;
 
 import 'package:polymer/polymer.dart';
 
+import 'login_dialog.dart';
+
 @CustomTag('login-widget')
 class LoginWidget extends PolymerElement {
 	@observable bool loggedIn;
+
+	LoginDialog get dialog => shadowRoot.querySelector('login-dialog');
 
   LoginWidget.created() : super.created();
 }
