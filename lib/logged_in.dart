@@ -7,8 +7,11 @@ library logged_in;
 
 import 'dart:html';
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:polymer/polymer.dart';
+
+import 'src/api_urls.dart';
 
 @CustomTag('logged-in')
 class LoggedIn extends PolymerElement {
@@ -20,7 +23,10 @@ class LoggedIn extends PolymerElement {
   static final String _usrId = 'trikiUsrId';
   static final String _authTkn = 'trikiAuthTkn';
   static final String _logInEv = 'log-in';
+  static final String _logInFailedEv = 'log-in-failed';
   static final String _logOutEv = 'log-out';
+
+  static final String _url = 'localhost:8888/api/auth/login';
 
   StreamSubscription<StorageEvent> _storageSubscr;
 
@@ -35,6 +41,7 @@ class LoggedIn extends PolymerElement {
 
   @override
   void detached() {
+    super.detached();
     _storageSubscr.cancel();
   }
 
@@ -46,15 +53,46 @@ class LoggedIn extends PolymerElement {
     this.fire(type, onNode: this, canBubble: false, cancelable: false);
   }
 
-  void loggedInAs(String usrId, String authTkn, bool rememberMe) {
-    this.usrId = usrId;
-    this.authTkn = authTkn;
-    this.loggedIn = true;
-    this.rememberMe = rememberMe;
-    _writeLS();
+  Cancel logIn(String usrId, String usrPass, bool rememberMe) {
+    HttpRequest req = new HttpRequest();
+    Cancel c = new Cancel(req);
+    req.responseType = 'json';
+    req.send(JSON.encode({'usr': usrId, 'pass': usrPass}));
+    req.open('POST', ApiUrl.login);
+    req.onLoad.listen((ProgressEvent e) {
+      if (c.cancelled) return;
+      try {
+        var resp = JSON.decode(req.responseText);
+        if (resp['tkn'] != null && resp['tkn'] != '') {
+          String authTkn = resp.tkn;
+          this.usrId = usrId;
+          this.authTkn = authTkn;
+          this.loggedIn = true;
+          this.rememberMe = rememberMe;
+          _writeLS();
+        } else {
+          this.fire(_logInFailedEv,
+              onNode: this,
+              canBubble: false,
+              cancelable: false,
+              detail: resp['err']);
+        }
+      } catch (e) {
+        window.console.error(
+            'error reading login response `${req.responseText}` from the server: ${e}');
+        this.fire(_logInFailedEv,
+            onNode: this, canBubble: false, cancelable: false, detail: e);
+      }
+    }, onError: (e) {
+      if (c.cancelled) return;
+      this.fire(_logInFailedEv,
+          onNode: this, canBubble: false, cancelable: false, detail: e);
+    });
+    return c;
   }
 
-  void loggedOut({bool remember: null}) {
+  logOut({bool remember: null}) {
+    //TODO(km): notify server (usrId, usrTkn)
     if (remember != null) {
       rememberMe = remember;
     }
@@ -88,7 +126,7 @@ class LoggedIn extends PolymerElement {
         authTkn = "";
       }
     } else {
-      loggedOut();
+      logOut();
     }
   }
 
@@ -104,5 +142,16 @@ class LoggedIn extends PolymerElement {
       window.localStorage.remove(_authTkn);
       window.localStorage.remove(_usrId);
     }
+  }
+}
+
+class Cancel {
+  bool _cancel = false;
+  HttpRequest _req;
+  Cancel(this._req);
+  bool get cancelled => _cancel;
+  void call() {
+    _cancel = true;
+    _req.abort();
   }
 }

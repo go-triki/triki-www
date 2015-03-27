@@ -20,6 +20,7 @@ class LoginDialog extends PolymerElement {
   @observable String Usr = "";
   @observable String Pass = "";
   @observable String serverMsg = "";
+  @observable bool connecting = false;
 
   FormElement get form => $['form'];
 
@@ -74,11 +75,12 @@ class LoginDialog extends PolymerElement {
     } else {
       _login();
     }
-    _dialog.focus();
+    //_dialog.focus();
     form.querySelector('input[autofocus]').focus();
   }
   void reset() {
-  	serverMsg = "";
+    connecting = false;
+    serverMsg = "";
     Pass = "";
     Usr = "";
     form.reset();
@@ -87,6 +89,11 @@ class LoginDialog extends PolymerElement {
   bool submit(Event e) {
     e.preventDefault();
     print("${Usr} ${Pass}");
+    connecting = true;
+    new Future.delayed(new Duration(seconds: 1), () {
+    	connecting = false;
+    	serverMsg = "test (not conneting to the server)";
+    });
     return false;
   }
   bool OkClick(Event e) {
@@ -101,5 +108,16 @@ class LoginDialog extends PolymerElement {
     if (!opened) {
       reset();
     }
+  }
+
+  void connectingChanged() {
+    form
+        .querySelectorAll('input')
+        .forEach((InputElement elem) => elem.disabled = connecting);
+  }
+
+  void close() {
+    reset();
+    _dialog.close();
   }
 }
