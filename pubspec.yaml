@@ -3,12 +3,12 @@ version: 0.0.1
 author: Kornel Maczyński <kornel661@gmail.com>
 description: Trikipedia web interface.
 environment:
-  sdk: '>=1.8.5 <2.0.0'
+  sdk: '>=1.10.0 <2.0.0'
 dependencies:
   browser: '^0.10.0+2'
-  core_elements: '^0.6.1+2'
-  paper_elements: '^0.6.2+2'
-  polymer: '^0.16.0+7'
+  core_elements: '^0.7.1+2'
+  paper_elements: '^0.7.1'
+  polymer: '^0.16.3+2'
   spa_router:
     path: '/home/kornel/Documents/programowanie/triki/spa-router'
 transformers:
